@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import '../main.dart';
+import 'food.dart';
 int catcnt=0, flag = 1;
 double num = 0.6;
 
 void main() 
 {
 
+  
   if(flag == 0){ //切換畫面
-    runApp(MyApp1());
+    runApp(Cat1());
 
   }else //進入遊戲
   {
@@ -19,7 +21,7 @@ void main()
 
 }
 //切換頁面
-class MyApp1 extends StatelessWidget {
+class Cat1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -43,12 +45,12 @@ class MyHomePage1 extends StatefulWidget {
 
 
 class _MyHomePageState1 extends State<MyHomePage1> {
-  int _counter = 0;
+
 
   void _incrementCounter() {
     setState(() {
      
-      _counter++;
+      
     });
   }
   
@@ -79,7 +81,7 @@ class _MyHomePageState1 extends State<MyHomePage1> {
               onPressed: () {
                 Navigator.push(context,
                 //切換頁面
-                MaterialPageRoute(builder: (context) => CatRoom()));},
+                MaterialPageRoute(builder: (context) => MyApp()));},
               child:Text('天氣資訊'),
               ),
             OutlineButton(
@@ -95,6 +97,13 @@ class _MyHomePageState1 extends State<MyHomePage1> {
                 //切換頁面
                 MaterialPageRoute(builder: (context) => CatRoom()));},
               child:Text('財務規劃'),
+              ),
+              OutlineButton(
+              onPressed: () {
+                Navigator.push(context,
+                //切換頁面
+                MaterialPageRoute(builder: (context) => first()));},
+              child:Text('用餐選擇'),
               ),
           ],
         ),
@@ -200,13 +209,7 @@ class _CatRoomState extends State<CatRoom> {
       home: Scaffold(
         body:Column(
           children: <Widget>[
-       /*     new Stack(children: <Widget>[
-              /*  new Image(
-                  image: new AssetImage("images/cat_edit.gif"),
-                  width: 300.0,
-                  height: 200.0,
-                  fit: BoxFit.cover,
-                ),*/]*/
+          
             Container(
               width: 500,
               height: 650,
@@ -221,9 +224,9 @@ class _CatRoomState extends State<CatRoom> {
             )
             ),
             
-          /*  Container(
+            Container(
               height: 10,
-            ),*/
+            ),
             Container(
               height: 50,
               child: 

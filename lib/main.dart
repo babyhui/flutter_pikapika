@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 import 'services/weather.dart';
 import 'screens/Test.dart';
 import 'screens/cat.dart';
+import 'screens/food.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -250,7 +251,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) {
-                                      return Test();
+                                      return first();
                                     },
                                   ),
                                 );
@@ -282,7 +283,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) {
-                                      return Cat2();
+                                      return Cat1();
                                     },
                                   ),
                                 );
