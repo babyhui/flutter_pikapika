@@ -7,7 +7,7 @@ import 'package:intl/intl.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:flutter_analog_clock/flutter_analog_clock.dart';
 import 'package:flutter/widgets.dart';
-
+import '../main.dart';
 var onoff = 0;
 var wallup = 0;
 var sellp = 0;
@@ -20,6 +20,21 @@ class home_page_de extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        appBar: AppBar(
+        title: Text('健康'),
+        backgroundColor: Colors.deepOrange[200],
+        leading: IconButton(
+            icon: Icon(Icons.keyboard_return),
+            onPressed: () {
+              Navigator.push(
+                context,
+                new MaterialPageRoute(builder: (context) => new MyApp()),
+              );
+            },
+          ),
+      ),
+      backgroundColor: Colors.orange[50],
+
         body: Container(
           child: Center(
             child: Row(
@@ -71,14 +86,16 @@ class _gankennState extends State<gankenn> {
       home: Scaffold(
         appBar: AppBar(
           title: Text("運動"),
+          backgroundColor: Colors.deepOrange[200],
           leading: IconButton(
             icon: Icon(Icons.keyboard_return),
             onPressed: () {
               Navigator.pop(context);
             },
           ),
-          backgroundColor: Colors.deepOrange[200],
+
         ),
+        backgroundColor: Colors.orange[50],
         body: Container(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -187,14 +204,16 @@ class maitest extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text("睡眠"),
+          backgroundColor: Colors.deepOrange[200],
           leading: IconButton(
             icon: Icon(Icons.keyboard_return),
             onPressed: () {
               Navigator.pop(context);
             },
           ),
-          backgroundColor: Colors.deepOrange[200],
+          
         ),
+        backgroundColor: Colors.orange[50],
         body: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
