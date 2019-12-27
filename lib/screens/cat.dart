@@ -232,6 +232,18 @@ class _CatRoomState extends State<CatRoom> {
         primarySwatch: Colors.green,
       ),
       home: Scaffold(
+        appBar: AppBar(
+          title: Text("睡眠"),
+          backgroundColor: Colors.deepOrange[200],
+          leading: IconButton(
+            icon: Icon(Icons.keyboard_return),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+          ),
+          
+        ),
+        backgroundColor: Colors.orange[50],
         body:Column(
           children: <Widget>[
           
@@ -256,7 +268,8 @@ class _CatRoomState extends State<CatRoom> {
               height: 50,
               child: 
               
-              OutlineButton(
+              RaisedButton(
+                color: Colors.deepOrange[300],
                 onPressed: (){
                   if(catcnt%6 == 1)
                   {
