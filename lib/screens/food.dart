@@ -165,15 +165,7 @@ class randomfood extends StatelessWidget {
         appBar: AppBar(
           title: Text(''
               '隨機食物'),
-          leading: IconButton(
-            icon: Icon(Icons.keyboard_return),
-            onPressed: () {
-              Navigator.push(
-                context,
-                new MaterialPageRoute(builder: (context) => new first()),
-              );
-            },
-          ),
+          
           backgroundColor: Colors.deepOrange[200],
         ),
         backgroundColor: Colors.orange[50],

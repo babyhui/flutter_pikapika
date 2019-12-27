@@ -13,10 +13,6 @@ void main()
   {
     runApp(Cat2());
   }
-
-
-
-
 }
 //切換頁面
 class MyApp1 extends StatelessWidget {

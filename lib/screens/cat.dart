@@ -6,20 +6,14 @@ double num = 0.6;
 
 void main() 
 {
-
-  
   if(flag == 0){ //切換畫面
     runApp(Cat1());
-
   }else //進入遊戲
   {
     runApp(Cat2());
   }
-
-
-
-
 }
+
 //切換頁面
 class Cat1 extends StatelessWidget {
   @override
@@ -27,7 +21,6 @@ class Cat1 extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage1(title: '  互動遊戲'),
@@ -38,72 +31,89 @@ class Cat1 extends StatelessWidget {
 class MyHomePage1 extends StatefulWidget {
   MyHomePage1({Key key, this.title}) : super(key: key);
   final String title;
-
   @override
   _MyHomePageState1 createState() => _MyHomePageState1();
 }
 
-
 class _MyHomePageState1 extends State<MyHomePage1> {
-
-
   void _incrementCounter() {
     setState(() {
-     
-      
     });
   }
-  
-  
- 
- 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       appBar: AppBar(
-       
         title: Text(widget.title),
+        backgroundColor: Colors.deepOrange[200],
+        leading: IconButton(
+            icon: Icon(Icons.keyboard_return),
+            onPressed: () {
+              Navigator.push(
+                context,
+                new MaterialPageRoute(builder: (context) => new first()),
+              );
+            },
+          ),
       ),
-      
+      backgroundColor: Colors.orange[50],
       body: Center(
-        
         child: Column(
-          
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            
             Text(
-              '還沒完成所有任務(´ー`)\n快點去其他功能看看吧\n',
+              ' 還沒完成所有任務  \n貓貓不想出現 (´･_･`)\n',
+               style: TextStyle
+                  (
+                  fontSize: 22, color: Colors.grey[700]),
             ),
-  
-            OutlineButton(
+            RaisedButton(
+              color: Colors.orangeAccent[400],
               onPressed: () {
                 Navigator.push(context,
                 //切換頁面
                 MaterialPageRoute(builder: (context) => MyApp()));},
-              child:Text('天氣資訊'),
+              child:Text(
+                '天氣資訊',
+                style: TextStyle
+                  (
+                  fontSize: 15, color: Colors.white),),
               ),
-            OutlineButton(
+            RaisedButton(
+              color: Colors.deepOrange[300],
               onPressed: () {
                 Navigator.push(context,
                 //切換頁面
                 MaterialPageRoute(builder: (context) => CatRoom()));},
-              child:Text('健康規劃'),
+              child:Text(
+                '健康規劃',
+                style: TextStyle
+                  (
+                  fontSize: 15, color: Colors.white),),
               ),
-            OutlineButton(
+            RaisedButton(
+              color: Colors.deepOrange[400],
               onPressed: () {
                 Navigator.push(context,
                 //切換頁面
                 MaterialPageRoute(builder: (context) => CatRoom()));},
-              child:Text('財務規劃'),
+              child:Text(
+                '財務規劃',
+                style: TextStyle
+                  (
+                  fontSize: 15, color: Colors.white),),
               ),
-              OutlineButton(
+            RaisedButton(
+              color: Colors.red[400],
               onPressed: () {
                 Navigator.push(context,
                 //切換頁面
                 MaterialPageRoute(builder: (context) => first()));},
-              child:Text('用餐選擇'),
+              child:Text(
+                '用餐選擇',
+                style: TextStyle
+                  (
+                  fontSize: 15, color: Colors.white),),
               ),
           ],
         ),
@@ -142,18 +152,14 @@ class MyHomePage2 extends StatefulWidget {
 
 
 class _MyHomePageState2 extends State<MyHomePage2> {
-  int _counter = 0;
+  
 
   void _incrementCounter() {
     setState(() {
      
-      _counter++;
+     
     });
   }
-  
-  
-  
- 
   @override
   Widget build(BuildContext context) {
     
@@ -392,41 +398,4 @@ Future<void> showAlert6(BuildContext context) {
     },
   );
 }
- // class Dialogue extends StatefulWidget {
-
-  
-//   _CatRoom  createState() => _CatRoom();
-
-
-
-
-class _CatRoom  extends State< CatRoom >
-    with SingleTickerProviderStateMixin {
-      
-      
-      Widget build(BuildContext context) {
-          
  
- 
-  AnimationController _controller;
-
-  @override
-  void initState() {
-    super.initState();
-    _controller = AnimationController(vsync: this);
-  }
-
-  @override
-  void dispose() {
-    super.dispose();
-    _controller.dispose();
-  }
-
-  @override
-  Widget build2(BuildContext context) {
-    return Container(
-      
-    );
-  }
-}
-    } 
