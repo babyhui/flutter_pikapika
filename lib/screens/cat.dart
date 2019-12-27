@@ -233,7 +233,7 @@ class _CatRoomState extends State<CatRoom> {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text("睡眠"),
+          title: Text("互動遊戲"),
           backgroundColor: Colors.deepOrange[200],
           leading: IconButton(
             icon: Icon(Icons.keyboard_return),
