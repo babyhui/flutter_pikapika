@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math';
 import 'package:flutter/services.dart';
+import 'package:ttttttt/main.dart';
 
 void main() => runApp(first());
 
@@ -11,6 +12,15 @@ class first extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text('用餐挑選'),
+          leading: IconButton(
+            icon: Icon(Icons.keyboard_return),
+            onPressed: () {
+              Navigator.push(
+                context,
+                new MaterialPageRoute(builder: (context) => new MyApp(),)
+              );
+            },
+          ),
           backgroundColor: Colors.deepOrange[200],
         ),
         backgroundColor: Colors.orange[50],
@@ -165,7 +175,15 @@ class randomfood extends StatelessWidget {
         appBar: AppBar(
           title: Text(''
               '隨機食物'),
-          
+          leading: IconButton(
+            icon: Icon(Icons.keyboard_return),
+            onPressed: () {
+              Navigator.push(
+                context,
+                new MaterialPageRoute(builder: (context) => new first()),
+              );
+            },
+          ),
           backgroundColor: Colors.deepOrange[200],
         ),
         backgroundColor: Colors.orange[50],
@@ -663,7 +681,7 @@ class _food3State extends State<food3> {
         Container(
           width: 250,
           height: 30,
-          margin: EdgeInsets.only(left: 0, top: 30, right: 70, bottom: 0),
+          margin: EdgeInsets.only(left: 0, top: 20, right: 70, bottom: 0),
           child: Text(
             '請輸入人數',
             style: TextStyle(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import '../main.dart';
 import 'food.dart';
-int catcnt=0, flag = 1;
+int catcnt=0, flag=1;
 double num = 0.6;
 
 void main() 
@@ -165,9 +165,19 @@ class _MyHomePageState2 extends State<MyHomePage2> {
     
     return Scaffold(
       appBar: AppBar(
-        
         title: Text(widget.title),
+        backgroundColor: Colors.deepOrange[200],
+        leading: IconButton(
+            icon: Icon(Icons.keyboard_return),
+            onPressed: () {
+              Navigator.push(
+                context,
+                new MaterialPageRoute(builder: (context) => new first()),
+              );
+            },
+          ),
       ),
+      backgroundColor: Colors.orange[50],
       body: Center(
         
         child: Column(
@@ -176,14 +186,23 @@ class _MyHomePageState2 extends State<MyHomePage2> {
           children: <Widget>[
             Text(
               '恭喜完成任務清單✧*｡٩(ˊᗜˋ*)و✧*｡\n',
+              style: TextStyle
+                  (
+                  fontSize: 20, color: Colors.grey[700]),
             ),
       
-            OutlineButton(
+            RaisedButton(
+              color: Colors.deepOrange[400],
               onPressed: () {
                 Navigator.push(context,
+                //切換頁面
                 MaterialPageRoute(builder: (context) => CatRoom()));},
-              child:Text('進入遊戲'),
-              )
+              child:Text(
+                '進入遊戲',
+                style: TextStyle
+                  (
+                  fontSize: 15, color: Colors.white),),
+              ),
           ],
         ),
       ),

@@ -7,7 +7,7 @@ import 'screens/Test.dart';
 import 'screens/cat.dart';
 import 'screens/food.dart';
 void main() => runApp(MyApp());
-
+//sint flag_cat = 0;
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -283,7 +283,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   context,
                                   MaterialPageRoute(
                                     builder: (context) {
-                                      return Cat1();
+                                      return Cat2();
                                     },
                                   ),
                                 );
