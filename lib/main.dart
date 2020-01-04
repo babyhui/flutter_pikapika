@@ -7,7 +7,10 @@ import 'screens/Test.dart';
 import 'screens/cat.dart';
 import 'screens/food.dart';
 import 'screens/health.dart';
+
 void main() => runApp(MyApp());
+
+//test
 //sint flag_cat = 0;
 class MyApp extends StatelessWidget {
   @override
